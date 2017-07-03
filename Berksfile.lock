@@ -1,0 +1,7 @@
+DEPENDENCIES
+  chefspec-render-file
+    path: .
+    metadata: true
+
+GRAPH
+  chefspec-render-file (0.1.0)
