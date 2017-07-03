@@ -11,6 +11,14 @@ describe 'chefspec-render-file::default' do
     it 'deletes the config file' do
       expect(chef_run).to delete_file(config_path)
     end
+
+    it 'does not create the config file, verified by create_template' do
+      expect(chef_run).to_not create_template(config_path)
+    end
+
+    it 'does not create the config file, verified by render_file' do
+      expect(chef_run).to_not render_file(config_path)
+    end
   end
 
   context 'with the optional attribute set' do
